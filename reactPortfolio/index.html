@@ -1,13 +1,98 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer Portfolio</title>
+  <link rel="stylesheet" href="/src/app.css">
+  <style>
+    /* Basic reset and font setup */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Root variables for color palette */
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #18bc9c;
+      --background-color: #ecf0f1;
+      --text-color: #34495e;
+      --header-footer-bg: #2c3e50;
+      --header-footer-text: #ecf0f1;
+    }
+
+    /* Basic styling for body */
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    /* Header styling */
+    header {
+      background: var(--header-footer-bg);
+      color: var(--header-footer-text);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    /* Navigation styling */
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: var(--header-footer-text);
+      text-decoration: none;
+      padding: 0.5rem;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    nav a:hover, nav a.active {
+      background: var(--secondary-color);
+      color: var(--primary-color);
+    }
+
+    /* Main content styling */
+    main {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Footer styling */
+    footer {
+      background: var(--header-footer-bg);
+      color: var(--header-footer-text);
+      padding: 1rem;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* Responsive design for smaller screens */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      main {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/main.jsx"></script>
+</body>
 </html>
